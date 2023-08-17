@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import GoogleImg from "../assets/Google.png";
+import Earth from "../assets/earth.png";
 import { Link, Navigate, json } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-hot-toast";
@@ -43,7 +44,12 @@ const SignIn = () => {
           <Navigate to={"/login"} />
         </>
       ) : (
-        <div className="flex items-center justify-center w-full h-screen select-none bg-primary">
+        <div className="flex items-center justify-center w-full h-screen space-x-64 select-none bg-primary">
+          <div className="flex flex-col items-center justify-center">
+            <img src={Earth} alt="" />
+            <h1 className=" text-pop text-[70px]">Kurakani</h1>
+            <p className="text-white ">Boli and Goli never returns </p>
+          </div>
           <div className="container h-[470px] sm;w-full sm:h-full sm:flex sm:justify-center sm:flex-col sm:items-center sm:mt-[-120px] ">
             <h1 className="mt-6 text-[30px] text-center text-pop font-poppins">
               Sign Up
@@ -56,20 +62,23 @@ const SignIn = () => {
                 value={username}
                 onChange={(e) => setUserName(e.target.value)}
                 type="text"
+                required
                 placeholder="Username"
                 className="w-[60%] sm:w-[90%]  sm:h-[36px] indent-3 h-[33px]  rounded-[50px] bg-secondary shadow-xl  "
               />
               <input
                 value={email}
+                required
                 onChange={(e) => setEmail(e.target.value)}
-                type="text"
+                type="email"
                 placeholder="Email"
                 className="w-[60%]  sm:w-[90%]  sm:h-[36px]  indent-3  h-[33px]  rounded-[50px] bg-secondary shadow-xl  "
               />
               <input
+                required
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
-                type="text"
+                type="password"
                 placeholder="Password"
                 className="w-[60%] sm:w-[90%]  sm:h-[36px]   indent-3  h-[33px]  rounded-[50px] bg-secondary shadow-xl  "
               />

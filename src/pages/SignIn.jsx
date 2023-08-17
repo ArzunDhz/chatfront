@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import GoogleImg from "../assets/Google.png";
 import { Link, Navigate } from "react-router-dom";
 import axios from "axios";
+import Earth from "../assets/earth.png";
 import { toast } from "react-hot-toast";
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -32,7 +33,13 @@ const Register = () => {
       {registered ? (
         <Navigate to={"/chat"} />
       ) : (
-        <div className="flex items-center justify-center w-full h-screen select-none bg-primary">
+        <div className="flex items-center justify-center w-full h-screen space-x-64 select-none bg-primary">
+          <div className="flex flex-col items-center justify-center">
+            <img src={Earth} alt="" />
+            <h1 className=" text-pop text-[70px]">Kurakani</h1>
+            <p className="text-white ">Boli and Goli never returns </p>
+          </div>
+
           <div className="container h-[470px] sm;w-full sm:h-full sm:flex sm:justify-center sm:flex-col sm:items-center sm:mt-[-120px] ">
             <h1 className="mt-6 text-[30px] text-center text-pop font-poppins">
               Sign In
@@ -43,12 +50,14 @@ const Register = () => {
             >
               <input
                 onChange={(e) => setEmail(e.target.value)}
-                type="text"
+                type="email"
+                required
                 placeholder="Email"
                 className="w-[60%]  text-white  sm:w-[90%]  sm:h-[36px]  indent-3  h-[33px]  rounded-[50px] bg-secondary shadow-xl  "
               />
               <input
-                type="text"
+                type="password"
+                required
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Password"
                 className="w-[60%] sm:w-[90%]  sm:h-[36px]   indent-3  h-[33px]  rounded-[50px] bg-secondary shadow-xl  "
@@ -77,7 +86,7 @@ const Register = () => {
                 )}
               </button>
             </form>
-            <div className=" cursor-pointer mx-auto w-[60%] sm:w-[80%] h-[50px]  hover:shadow-2xl  bg-secondary rounded-full mt-10  flex justify-center items-center space-x-11">
+            <div className="  mx-auto w-[60%] sm:w-[80%] h-[50px]  hover:shadow-2xl  bg-secondary rounded-full mt-10  flex justify-center items-center space-x-11">
               <img
                 src={GoogleImg}
                 className="w-[30px] h-[30px]"
