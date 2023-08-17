@@ -53,14 +53,14 @@ const Register = () => {
                 type="email"
                 required
                 placeholder="Email"
-                className="w-[60%]  text-white  sm:w-[90%]  sm:h-[36px]  indent-3  h-[33px]  rounded-[50px] bg-secondary shadow-xl  "
+                className="w-[60%]  input text-white  sm:w-[90%]  sm:h-[36px]  indent-3  h-[33px]  rounded-[50px] bg-secondary shadow-xl  "
               />
               <input
                 type="password"
                 required
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Password"
-                className="w-[60%] sm:w-[90%]  sm:h-[36px]   indent-3  h-[33px]  rounded-[50px] bg-secondary shadow-xl  "
+                className=" input w-[60%] sm:w-[90%]  sm:h-[36px]   indent-3  h-[33px]  rounded-[50px] bg-secondary shadow-xl  "
               />
 
               <button className="w-[120px] h-[40px]  text-black rounded-full  bg-gradient-to-r from-pop to-blue-500  hover:border-2 border-white  hover:text-white ">

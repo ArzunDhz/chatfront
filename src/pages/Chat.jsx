@@ -148,13 +148,13 @@ const Chat = () => {
           </div>
           <div>
             <form
-              className={!currentChat ? "hidden" : "flex"}
+              className={!currentChat ? "hidden" : "flex bg-slate-900 "}
               onSubmit={sendMessage}
             >
               <input
                 required
                 type="text"
-                className="flex-grow bg-slate-600"
+                className=" text-white flex-grow bg-slate-700 rounded-xl indent-3 h-[40px] "
                 placeholder="Text..."
                 value={chatMessage}
                 onChange={(e) => setChatMessage(e.target.value)}
@@ -165,7 +165,7 @@ const Chat = () => {
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
-                  stroke="currentColor"
+                  stroke="white"
                   className="w-6 h-6"
                 >
                   <path
@@ -178,7 +178,7 @@ const Chat = () => {
             </form>
           </div>
         </div>
-        <div className="w-1/6 overflow-y-scroll bg-slate-900 sm:hidden ">
+        <div className="w-1/6 overflow-y-scroll bg-slate-800 sm:hidden ">
           <h1 className="mt-6 text-center text-pop text-[40px]">All Users </h1>
           {myInfo?._id &&
             friendData?.map((e) => (

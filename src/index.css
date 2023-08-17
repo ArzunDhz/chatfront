@@ -20,10 +20,10 @@
   box-shadow: 5px 4px 100px 25px rgba(0, 0, 0, 0.25);
 }
 
-input {
+.container > form > input {
   padding: 0.5rem;
   border: double 1px transparent;
-  border-radius: 2px;
+  border-radius: 40px;
   background-image: linear-gradient(#222529, rgb(25, 30, 24)),
     linear-gradient(to right, rgb(24, 255, 12), rgb(121, 157, 113));
   background-origin: border-box;
