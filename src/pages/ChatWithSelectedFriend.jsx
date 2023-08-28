@@ -3,7 +3,7 @@ import axios from "axios";
 import Messages from "../components/Messages";
 import { io } from "socket.io-client";
 import { currentLoggedInUserInfoStore, currentUserStore } from "../store/store";
-const API = import.meta.env.VITE_API;
+const API = "https://chatback-2g5m.onrender.com";
 
 const ChatWithSelectedFriend = () => {
   const { currentUserId, currentReceiverId } = currentUserStore();

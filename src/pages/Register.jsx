@@ -5,7 +5,7 @@ import { GoogleIcon } from "../assets/icons";
 import { Link, Navigate } from "react-router-dom";
 import axios from "axios";
 import { useFormik } from "formik";
-const API = import.meta.env.VITE_API;
+const API = "https://chatback-2g5m.onrender.com";
 import { FormSchema } from "../middlewares/ValidateForm";
 import { toast } from "react-hot-toast";
 const Register = () => {

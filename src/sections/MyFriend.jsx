@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import FriendBox from "../components/FriendBox";
 import { currentUserStore } from "../store/store";
-const API = import.meta.env.VITE_API;
+const API = "https://chatback-2g5m.onrender.com";
 const MyFriend = () => {
   const [myConversations, setMyConversations] = useState();
   const [myId, setMyId] = useState();

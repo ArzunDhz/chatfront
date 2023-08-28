@@ -1,7 +1,7 @@
 import axios from "axios";
 import { create } from "zustand";
 
-const API = import.meta.env.VITE_API;
+const API = "https://chatback-2g5m.onrender.com";
 export const currentLoggedInUserInfoStore = create((set) => ({
   myInfo: null,
   getMyinfo: async () => {

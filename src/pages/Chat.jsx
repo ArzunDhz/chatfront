@@ -6,7 +6,8 @@ import { currentLoggedInUserInfoStore, currentUserStore } from "../store/store";
 import axios from "axios";
 import Messages from "../components/Messages";
 import { io } from "socket.io-client";
-const API = import.meta.env.VITE_API;
+const API = " https://chatback-2g5m.onrender.com";
+
 const Chat = () => {
   const { currentUserId, currentReceiverId } = currentUserStore();
   const { myInfo, getMyinfo } = currentLoggedInUserInfoStore();
@@ -49,7 +50,7 @@ const Chat = () => {
   }, [messages]);
 
   useEffect(() => {
-    socket.current = io("http://localhost:8000");
+    socket.current = io("https://socket-g42x.onrender.com");
     socket.current.on("getMessage", (data) => {
       setArrivalMessage({
         sender: data.senderId,

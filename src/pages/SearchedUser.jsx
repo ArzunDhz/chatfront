@@ -10,7 +10,7 @@ const SearchedUser = () => {
   const { searchUserId } = useStore();
   const [userData, setUserData] = useState([]);
   const [isUserAdded, setIsUserAdded] = useState(false);
-  const API = import.meta.env.VITE_API;
+  const API = "https://chatback-2g5m.onrender.com";
   useEffect(() => {
     const getUserInfo = async () => {
       const { data } = await axios.get(

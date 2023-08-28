@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-const API = import.meta.env.VITE_API;
+const API = "https://chatback-2g5m.onrender.com";
 const FriendBox = ({ data, myId }) => {
   const [friendDataFromApi, setFriendDataFromApi] = useState();
   const friendId = data?.members.find((m) => m != myId);

@@ -3,7 +3,7 @@ import { SearchUserIcon } from "../assets/icons";
 import axios from "axios";
 import { useRef } from "react";
 import { useStore } from "../store/store";
-const API = import.meta.env.VITE_API;
+const API = "https://chatback-2g5m.onrender.com";
 import { Navigate } from "react-router-dom";
 
 const make = false;
