@@ -111,8 +111,8 @@ const Chat = () => {
           </section>
         </div>
         {!currentUserId ? (
-          <div className="flex items-center justify-center w-full">
-            <h1> Select Convversation</h1>
+          <div className="flex lg:items-center justify-center w-full min-h-[100dvb] mt-20 ">
+            <h1> Select Conversation or Add Friend</h1>
           </div>
         ) : (
           <section className="flex flex-col lg:w-5/6">

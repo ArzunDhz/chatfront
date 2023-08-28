@@ -41,7 +41,6 @@
 .messageContainer {
   height: calc(100vh- 200px);
 }
-/* 
 body {
-  overflow: hidden;
-} */
+  background-color: #1d2127;
+}

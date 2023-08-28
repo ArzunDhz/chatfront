@@ -45,7 +45,7 @@ const MyInfoBar = () => {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             type="text"
-            className="rounded-full ok indent-3 "
+            className="w-[250px] rounded-full ok indent-3 "
           />
           <div className="absolute z-50 w-full bg-secondary ">
             {isFocused &&
