@@ -51,7 +51,7 @@ const MyInfoBar = () => {
             {isFocused &&
               suggestion?.map((e) => (
                 <li
-                  className="pl-2 text-sm list-none cursor-pointer hover:bg-primary"
+                  className="p-4 text-sm list-none cursor-pointer hover:bg-primary"
                   key={e._id}
                   onClick={() => {
                     setSearchUserID(e._id),
