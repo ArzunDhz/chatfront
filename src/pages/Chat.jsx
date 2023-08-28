@@ -135,7 +135,7 @@ const Chat = () => {
               <input
                 required
                 type="text"
-                className="  text-white flex-grow bg-slate-700  indent-3 h-[40px] "
+                className="  text-white flex-grow bg-black indent-3 h-[40px] "
                 placeholder="Text..."
                 value={messageFromTextBox}
                 onChange={(e) => setMessageFromTextBox(e.target.value)}
