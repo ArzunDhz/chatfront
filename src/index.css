@@ -6,22 +6,10 @@
 * {
   font-family: Poppins;
 }
-::-webkit-scrollbar {
-  display: none;
-}
-* .container {
-  border-radius: 20px;
-  border: 0px solid #000;
-  background: var(
-    #252930,
-    linear-gradient(180deg, #252930 0%, rgba(37, 41, 48, 0) 100%)
-  );
-  width: 491px;
-  box-shadow: 5px 4px 100px 25px rgba(0, 0, 0, 0.25);
-}
-
-.container > form > input {
-  padding: 0.5rem;
+.form > div > input {
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
   border: double 1px transparent;
   border-radius: 40px;
   background-image: linear-gradient(#222529, rgb(25, 30, 24)),
@@ -30,13 +18,30 @@
   background-clip: padding-box, border-box;
 }
 
-.layout {
-  width: 1366px;
-  height: 768px;
-
-  display: flex;
+.ok {
+  border: double 1px transparent;
+  border-radius: 10px;
+  background-image: linear-gradient(#222529, rgb(25, 30, 24)),
+    linear-gradient(to right, rgb(24, 255, 12), rgb(121, 157, 113));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+.form {
+  background: rgb(37, 41, 48);
+  background: linear-gradient(
+    180deg,
+    rgba(37, 41, 48, 1) 4%,
+    rgb(15, 15, 15) 75%
+  );
 }
 
-.grow1 {
-  flex-grow: 1;
+::-webkit-scrollbar {
+  width: 10%;
 }
+.messageContainer {
+  height: calc(100vh- 200px);
+}
+/* 
+body {
+  overflow: hidden;
+} */

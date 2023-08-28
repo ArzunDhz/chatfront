@@ -13,7 +13,6 @@ const Register = () => {
   const [isUserRegistered, setIsUserRegistered] = useState(false);
   const { handleChange, handleSubmit, values, errors } = useFormik({
     initialValues: {
-      username: "",
       email: "",
       password: "",
     },
@@ -22,9 +21,8 @@ const Register = () => {
       setLoading(true);
       await axios
         .post(
-          `${API}/user/register`,
+          `${API}/user/login`,
           {
-            username: values.username,
             email: values.email,
             password: values.password,
           },
@@ -41,7 +39,7 @@ const Register = () => {
   return (
     <>
       {isUserRegistered ? (
-        <Navigate to={"/login"} />
+        <Navigate to={"/chat"} />
       ) : (
         <div className="flex justify-center w-full h-screen overflow-hidden sm:flex-col bg-primary">
           {/* contain both image and form */}
@@ -68,25 +66,9 @@ const Register = () => {
             <div className="">
               <form
                 onSubmit={handleSubmit}
-                className="  shadow-2xl form lg:w-[450px] p-[90px] rounded-xl h-[450px] justify-center items-center   flex flex-col space-y-3  "
+                className=" shadow-2xl   form lg:w-[450px] p-[90px] rounded-xl h-[450px] justify-center items-center flex flex-col space-y-3  "
               >
-                <h1 className="text-xl text-pop"> Sign Up </h1>
-                <div className="">
-                  <input
-                    required
-                    value={values.username.trim()}
-                    onChange={handleChange}
-                    name="username"
-                    type="text"
-                    placeholder="UserName"
-                    className="rounded-full text-pop bg-secondary"
-                  />
-                  <br />
-                  <span className="text-red-300 text-[10px] ml-6 ">
-                    {errors.username}
-                  </span>
-                  <br />
-                </div>
+                <h1 className="text-xl text-pop"> Sign In </h1>
 
                 <div className="">
                   <input
@@ -109,6 +91,7 @@ const Register = () => {
                     onChange={handleChange}
                     name="password"
                     type="password"
+                    autoComplete
                     placeholder="Password"
                     className="rounded-full text-pop bg-secondary"
                   />
@@ -121,7 +104,7 @@ const Register = () => {
 
                 <Button text="Sign Up" isLoading={{ loading }} />
 
-                <div className="flex p-2 space-x-4 rounded-full shadow-2xl text-pop bg-primary google_container">
+                <div className="flex p-2 space-x-4 rounded-full bg-primary shadow-5xl text-pop google_container">
                   <img
                     src={GoogleIcon}
                     width={24}
@@ -133,12 +116,12 @@ const Register = () => {
                 </div>
                 <div className=" w-fit text-pop">
                   <h1>
-                    Have Account ?
+                    Don't Have Account ?
                     <Link
-                      className="ml-5 text-sm underline cursor-pointer hover:text-white"
-                      to={"/login"}
+                      className="ml-2 text-sm underline cursor-pointer hover:text-white"
+                      to={"/"}
                     >
-                      Sign In
+                      Sign Up
                     </Link>
                   </h1>
                 </div>

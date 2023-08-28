@@ -1,20 +1,23 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Register from "./pages/Register";
-import SignIn from "./pages/SignIn";
-import { Toaster } from "react-hot-toast";
+import Login from "./pages/Login";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Chat from "./pages/Chat";
-
+import { Toaster } from "react-hot-toast";
+import SearchedUser from "./pages/SearchedUser";
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Register />} />
-        <Route path="/login" element={<SignIn />} />
-        <Route path="/chat" element={<Chat />} />
-      </Routes>
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/chat" element={<Chat />} />
+          <Route path="/searchedUser" element={<SearchedUser />} />
+        </Routes>
+      </Router>
       <Toaster />
-    </Router>
+    </>
   );
 };
 
